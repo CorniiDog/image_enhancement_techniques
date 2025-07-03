@@ -21,6 +21,7 @@ class Denoising():
             
             try:
                 path=os.path.join(self.label_dir,f)
+                img=cv2.imread(path)
                 img=cv2.resize(img,(self.IMG_SIZE,self.IMG_SIZE))
                 self.training_data.append(np.array(img))
 
